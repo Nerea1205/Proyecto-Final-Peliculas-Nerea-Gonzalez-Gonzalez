@@ -1,0 +1,139 @@
+<!-- Indicamos al navegador que utilizamos HTML-->
+<!DOCTYPE html>
+
+<!-- Indicamos que el idioma principal de la página es el español-->
+<html lang="es">
+<!--Abrimos la parte de configuración de la página-->
+    <head>
+        <!--Permitimos mostrar correctamente las tildes,las ñ y otros caracteres puesto que la aplicación es en español-->
+        <meta charset="UTF-8">
+        <!-- Hacemos que la página se adapte al ancho de la pantalla del dispositivo. -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--Establecemos el título-->
+        <title>Buscador de películas</title>
+        <!--Cargamos Bootstrap para utilizar sus estilos-->
+        <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+        <link href="/static/css/estilos.css" rel="stylesheet">
+    </head>
+
+    <!--Abrimos la selección de los elementos visibles de la página-->
+    <body>
+        <!--Cremos un contenedor centrado y aañadimos un margen superior con Bootstrap-->
+        <div class="container mt-4">
+            <!--Agrupamos los elementos que forman el buscador-->
+            <!--Mostramos el título principal de nuestra aplicación-->
+            <h1 class="mb-4">Buscador de películas</h1>
+            <!--Aqui iremos colocando los elementos del buscador-->    
+            <div class="mb-4">
+                <label for="txtTitulo" class="form-label">
+                    Título de la película:
+                </label>
+                <!--Indicamos al usuario que información debe introducir-->
+                <input
+                    type="text"
+                    id="txtTitulo"
+                    class="form-control mb-3"
+                    placeholder="Ejemplo:Matrix">
+                <!--Creamoos el campo donde el usuario escribira el título de la película.
+                El atributo id nos permite localizar este campo que es unico para cada película
+                El aatributo placeholder muestra un ejemplo en el campo vacío-->
+                <label for="txtAnio" class="form-label">
+                    Año de estreno(opcional)
+                </label>
+                <input
+                    type="number"
+                    id="txtAnio"
+                    class="form-control mb-3"
+                    placeholder="Ejemplo:1994">
+
+                <button
+                    type="button"
+                    id="btBuscar"
+                    class="btn btn-primary">Buscar
+                </button>
+                <!---Creamos el botón para iniciar la búsqueda.Su id permitirá que JavaScrip detecte cuando se pulsa-->
+            </div>
+            <!--Añadimos una linea horizontal para separar las secciones-->
+            <hr>
+            <!--Mostramos el título de la sección-->
+            <h2 class="mb-3">Resultados de la búsqueda</h2>
+            <!--Cremos una zona vacía donde se colocaran los resultados.
+            La clase row de bootstrap permite organizar las películas en columnas.-->
+            <div id="resultados" class="row"></div>
+    
+            <!--Creamos la zona donde mostramos los detalles de la película seleccionada.
+            Por ejemplo:título,año.sipnosis,director-->
+            <div id="detallePelicula" class="mt-4"></div>
+            <!--Creamos una zona donde mostramos la valoracion media de la pelicula seleccionada-->
+            <div id="valoracionMedia"></div>
+            <!--Creamos una sección para los comentarios-->
+            <div id="seccionComentarios" class="mt-4">
+                <!--Separamos la sección de comentarios-->
+                <hr>
+                <!--Ponemos el título de la sección-->
+                <h2 class="mb-3">Comentarios</h2>
+                <!--Mostramos los comentarios guardados para cada película-->
+                <div id="listaComentarios"></div>
+                <!--Creamos un botón para mostrar el formulario de nuevo comentario-->
+                <button
+                    type="button"
+                    id="btMostrarFormulario"
+                    class="btn btn-warning mt-3">Agregar Comentario
+                </button>
+                <!--Creamos un espacio de bootstrap para agrupar el formulario -->
+                <div id="formularioComentario"class ="card mt-3 p-3 d-none">
+                    <h3 class="h5 mb-3">Nuevo Comentario</h3>
+                    <label for="txtNombre" class="form-label">
+                        Nombre
+                    </label>
+                    <!--Este campo es para indicar el nombre de la persona-->
+                    <input
+                        type="text"
+                        id="txtNombre"
+                        class="form-control mb-3"
+                        placeholder="Escribe tu nombre">
+                    <label for="txtComentario"class="form-label">
+                        Comentario
+                    </label>
+                    <!--Mostramos el siguiente campo que sirve para escribir el comentario-->
+                    <textarea
+                        id="txtComentario"
+                        class="form-control mb-3"
+                        rows="4"
+                        placeholder="Escribe tu comentario">
+                    </textarea>
+                    <!---Este campo permite valorar la pelicula de 1 a 5-->
+                    <label for="txtValoracion" class="form-label">
+                        Valoración
+                    </label>
+                    <!-- Creamos una lista desplegable con las posibles valoraciones-->
+                    <select id="txtValoracion" class="form-select mb-3">
+                        <!--Opcion inicial paraa indicar que todavía no se ha elegido una valoracion-->
+                        <option value="">Selecciona una valoración</option>
+                        <!--Opciones para valorar la pelicula de 1 a 5 estrellas-->
+                        <option value="1">1 estrella</option>
+                        <option value="2">2 estrellas</option>
+                        <option value="3">3 estrellas</option>
+                        <option value="4">4 estrellas</option>
+                        <option value="5">5 estrellas</option>
+                    </select>
+                    <!--Creamos un botón para guardar los comentarios-->
+                    <button
+                        type="button"
+                        id="btGuardarComentario"
+                        class="btn btn-primary">Guardar
+                    </button>
+                    <!--Creamos un mensaje que avise de si el comentario se ha guardado correctamente o hay un error-->
+                    <div id="mensajeComentario" class="mt-3"></div>
+                </div>
+            </div>
+        </div>
+        <script src="/static/js/bootstrap.bundle.min.js"></script>
+        <script src="/static/js/app.js"></script>
+    </body>
+</html>
+
+
+
+
+        

@@ -1,0 +1,115 @@
+body{
+    background-color:#f0f5fc;
+    color: #243b53;
+}
+/*Contenedor principal*/
+.container { padding-bottom: 30px;
+}
+/*Titulos*/
+/*Titulo principal*/
+h1 {
+    color:#1e3a5f;
+    font-weight: bold;
+}
+/*Titulos de las secciones*/
+h2,h3{
+    color:#274c77;
+}
+/*Espacio de los titulos de las peliculas*/
+#resultados.card h5{
+    color:#1e3a5f;
+    font-weight: bold;
+}
+/*Camppos de texto, comentarios y listas desplegables*/
+.form-control,.form-select{
+    border-radius: 8px;
+    border-color: #cbdaf0;
+}
+/*Color del borde cuando seleccionamos un campo*/
+.form-control:focus,.form-select:focus{
+    border-color:#6ea8fe;
+    box-shadow: 0 0 0 0.2rem rgba(37, 99, 235, 0.15);
+}
+/*Botones*/
+.btn{
+    border-radius: 8px;
+}
+/*Botones principales*/
+.btn-primary {
+    background-color: #2563eb;
+    border-color: #2563eb;
+}
+
+/* Color del boton principal cuando pasamos el raton */
+.btn-primary:hover {
+    background-color: #1d4ed8;
+    border-color: #1d4ed8;
+}
+/*Boton para agregar comentarios*/
+.btn-warning {
+    background-color: #dbeafe;
+    border-color: #bfdbfe;
+    color: #1e3a5f;
+}
+/* Color del boton para agregar comentarios al pasar el raton */
+.btn-warning:hover {
+    background-color: #bfdbfe;
+    border-color: #93c5fd;
+    color: #1e3a5f;
+}
+/*Resultados de la busqueda*/
+/*Tarjetas que contienen las peliculas*/
+#resultados.card {
+    height: 100%;
+    background-color: #ffffff;
+    border: 1px solid #d7e3f4;
+    border-radius: 10px;
+    overflow: hidden;
+}
+/*Carteles de las peliculas*/
+.cartel-pelicula {
+    width: 100%;
+    height:280px;
+    object-fit: contain;
+    background-color: #ffffff;
+}
+/*Texto del año de cada pelicula*/
+#resultados.card p{
+    color:#526b84;
+    margin-bottom: 5px;
+}
+/*Detalles de la pelicula seleccionada*/
+/*Espacio donde se muestran los detalles*/
+#detallePelicula:not(:empty){
+    background-color: #e6efff;
+    color: #1e3a5f;
+    border: 1px solid #cbdaf0;
+    border-radius: 8px;
+    padding: 12px;
+    margin-top: 12px;
+}
+/*Comentarios*/
+/*Estilo de cada comentario*/
+#listaComentarios p{
+    background-color: #ffffff;
+    border: 1px solid #d7e3f4;
+    border-radius: 8px;
+    padding: 12px;
+    margin-bottom: 10px;
+    color:#334e68;
+}
+/*Formulario nuevo comentario*/
+#formularioComentario{
+    background-color: #ffffff;
+    border: 1px solid #d7e3f4;
+    border-radius:10px;
+}
+/*Titulo del formulario*/
+#formularioComentario h3{
+    color:#1e3a5f;
+}
+/*Lineas separadoras entre secciones*/
+hr{
+    border-color: #cbdaf0;
+    opacity: 1;
+}
